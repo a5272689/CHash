@@ -1,7 +1,6 @@
 package CHash
 
 import (
-	"fmt"
 	"hash/crc32"
 	"sort"
 	"sync"
@@ -64,7 +63,6 @@ func (c *Consistent) search(hash uint32) int {
 	a:=0
 	for i,tmphash:=range c.Ring{
 		if tmphash>=hash{
-			fmt.Println(tmphash,hash)
 			a=i-1
 			break
 		}
